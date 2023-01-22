@@ -1,6 +1,6 @@
 package com.example.springboot.services;
 
-import com.example.springboot.domain.entities.Offer;
+import com.example.springboot.models.entities.Offer;
 import com.example.springboot.repositories.OfferRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;

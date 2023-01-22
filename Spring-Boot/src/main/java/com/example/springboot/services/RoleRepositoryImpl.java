@@ -1,6 +1,6 @@
 package com.example.springboot.services;
 
-import com.example.springboot.domain.enums.Role;
+import com.example.springboot.models.enums.Role;
 import com.example.springboot.repositories.RoleRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;

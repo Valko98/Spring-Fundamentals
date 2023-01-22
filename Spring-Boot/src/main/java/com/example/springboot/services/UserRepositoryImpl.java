@@ -1,6 +1,6 @@
 package com.example.springboot.services;
 
-import com.example.springboot.domain.entities.User;
+import com.example.springboot.models.entities.User;
 import com.example.springboot.repositories.UserRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
