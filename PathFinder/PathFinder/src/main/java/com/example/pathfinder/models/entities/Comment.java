@@ -19,7 +19,7 @@ public class Comment extends BaseEntity {
     @Column
     private LocalDateTime created;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "text_content", columnDefinition = "TEXT")
     private String text;
 
     @ManyToOne

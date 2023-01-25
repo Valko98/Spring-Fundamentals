@@ -14,7 +14,4 @@ public class Category extends BaseEntity {
 
     @Column(columnDefinition = "TEXT")
     private String description;
-
-
-
 }

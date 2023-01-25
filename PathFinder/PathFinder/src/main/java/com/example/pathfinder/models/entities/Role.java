@@ -11,6 +11,6 @@ public class Role extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(unique = true)
-    private UserRoles name;
+    private UserRoles role;
 
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.util.Set;
 
+
 @Data
 @Entity
 @Table(name = "routes")
@@ -20,17 +21,20 @@ public class Route extends BaseEntity {
     @Column
     private String name;
 
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
     @ManyToOne
     private User author;
 
     @Column
     private String videoUrl;
 
-    @OneToMany(targetEntity = Comment.class,mappedBy = "route")
+    @OneToMany(targetEntity = Comment.class,mappedBy = "route", fetch = FetchType.EAGER)
     private Set<Comment> comments;
 
-    @OneToOne
-    private Picture header;
+    @OneToMany(mappedBy = "route")
+    private Set<Picture> pictures;
 
     @ManyToMany
     private Set<Category> categories;
