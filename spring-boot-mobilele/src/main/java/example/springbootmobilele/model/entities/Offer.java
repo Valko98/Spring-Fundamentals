@@ -1,4 +1,4 @@
-package example.springbootmobilele.model.entity;
+package example.springbootmobilele.model.entities;
 
 import example.springbootmobilele.model.enums.EngineEnum;
 import example.springbootmobilele.model.enums.TransmissionEnum;
@@ -14,7 +14,7 @@ import java.util.UUID;
 @Setter
 @Entity
 @Table(name = "offers")
-public class OfferEntity {
+public class Offer {
 
     @Id
     @GeneratedValue(generator = "UUID")
@@ -42,23 +42,9 @@ public class OfferEntity {
     private int year;
 
     @ManyToOne
-    private ModelEntity model;
+    private Model model;
 
     @ManyToOne
-    private UserEntity seller;
+    private User seller;
 
-    @Override
-    public String toString() {
-        return "OfferEntity{" +
-                "id=" + id +
-                ", engine=" + engine +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", mileage=" + mileage +
-                ", price=" + price +
-                ", transmission=" + transmission +
-                ", year=" + year +
-                ", model=" + model +
-                ", seller=" + seller +
-                '}';
-    }
 }

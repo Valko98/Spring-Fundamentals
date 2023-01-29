@@ -1,4 +1,4 @@
-package example.springbootmobilele.model.entity;
+package example.springbootmobilele.model.entities;
 
 import example.springbootmobilele.model.enums.UserRoleEnum;
 import jakarta.persistence.*;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "user_roles")
-public class UserRoleEntity {
+public class UserRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +19,4 @@ public class UserRoleEntity {
     @Enumerated(EnumType.STRING)
     private UserRoleEnum userRole;
 
-    @Override
-    public String toString() {
-        return "UserRoleEntity{" +
-                "id=" + id +
-                ", userRole=" + userRole +
-                '}';
-    }
 }

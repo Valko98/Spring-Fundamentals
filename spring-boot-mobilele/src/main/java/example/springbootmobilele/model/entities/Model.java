@@ -1,4 +1,4 @@
-package example.springbootmobilele.model.entity;
+package example.springbootmobilele.model.entities;
 
 import example.springbootmobilele.model.enums.CategoryEnum;
 import jakarta.persistence.*;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "models")
-public class ModelEntity extends BaseEntity {
+public class Model extends BaseEntity {
 
     @Column(nullable = false)
     private String name;
@@ -27,5 +27,5 @@ public class ModelEntity extends BaseEntity {
     private Long endYear;
 
     @ManyToOne
-    private BrandEntity brand;
+    private Brand brand;
 }

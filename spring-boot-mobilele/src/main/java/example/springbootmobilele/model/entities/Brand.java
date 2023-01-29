@@ -1,4 +1,4 @@
-package example.springbootmobilele.model.entity;
+package example.springbootmobilele.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,13 +11,13 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "brands")
-public class BrandEntity extends BaseEntity {
+public class Brand extends BaseEntity {
 
     @Column(nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "brand", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<ModelEntity> models = new ArrayList<>();
+    private List<Model> models = new ArrayList<>();
 
 
 

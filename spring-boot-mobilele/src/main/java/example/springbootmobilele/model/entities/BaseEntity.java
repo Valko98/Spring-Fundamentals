@@ -1,4 +1,4 @@
-package example.springbootmobilele.model.entity;
+package example.springbootmobilele.model.entities;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
