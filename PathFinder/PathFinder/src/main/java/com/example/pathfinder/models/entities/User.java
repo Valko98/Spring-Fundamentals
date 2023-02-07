@@ -3,6 +3,8 @@ package com.example.pathfinder.models.entities;
 import com.example.pathfinder.models.enums.Level;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -30,4 +32,18 @@ public class User extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     private Level level;
+
+    public User(String username, String password, String email, String fullName, int age) {
+         this();
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.fullName = fullName;
+        this.age = age;
+
+    }
+
+    public User() {
+        this.roles = new HashSet<>();
+    }
 }

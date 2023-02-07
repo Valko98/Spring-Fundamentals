@@ -1,13 +1,16 @@
 package example.springbootmobilele.services;
 
 import example.springbootmobilele.model.dtos.UserLoginDTO;
+import example.springbootmobilele.model.dtos.UserRegisterDTO;
 import example.springbootmobilele.model.entities.User;
 import example.springbootmobilele.model.repositories.UserRepository;
 import example.springbootmobilele.user.CurrentUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Locale;
 import java.util.Optional;
 
 
@@ -18,9 +21,12 @@ public class UserService {
     private final UserRepository userRepository;
     private final CurrentUser currentUser;
 
+
     public UserService(UserRepository userRepository, CurrentUser currentUser) {
         this.userRepository = userRepository;
         this.currentUser = currentUser;
+
+
 
     }
 
@@ -52,4 +58,6 @@ public class UserService {
     public void logout() {
         currentUser.clear();
     }
+
+
 }
